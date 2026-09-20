@@ -1,6 +1,6 @@
 {
-  "name": "ACHITEX",
-  "description": "ACHITEX — Architecture | Design | Engineering. Bespoke residential architecture, planning advice, creative design, planning permissions, and building regulations across the UK.",
+  "name": "RAARCHITEX",
+  "description": "RAARCHITEX — Architecture | Design | Engineering. Bespoke residential architecture, planning advice, creative design, planning permissions, and building regulations across the UK.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

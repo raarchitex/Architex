@@ -16,7 +16,7 @@ export function ProjectsPage() {
             <div className="flex items-center gap-2 mb-3">
               <span className="w-2.5 h-[2px] bg-[#D01020]" />
               <span className="text-xs font-mono font-bold uppercase tracking-[0.22em] text-[#D01020]">
-                ACHITEX PORTFOLIO
+                RAARCHITEX PORTFOLIO
               </span>
             </div>
 

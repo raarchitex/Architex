@@ -28,7 +28,6 @@ export function CTASection({
           {/* Left Column: Heading & Copy */}
           <div className="lg:col-span-7 space-y-6">
             <div className="flex items-center gap-2.5">
-              <span className="inline-block w-6 h-[2px] bg-[#D01020]" />
               <span className="text-xs font-mono font-bold tracking-[0.25em] uppercase text-[#D01020]">
                 HAVE A PROJECT IN MIND?
               </span>
@@ -91,7 +90,7 @@ export function CTASection({
                   PRACTICE LOCATION &bull; UK
                 </span>
                 <h3 className="text-xl sm:text-2xl font-sans font-bold text-[#111827]">
-                  ACHITEX Studio
+                  RAARCHITEX Studio
                 </h3>
               </div>
 

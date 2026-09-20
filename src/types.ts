@@ -12,7 +12,11 @@ export type ProjectCategory =
   | 'Visualisation'
   | 'Infrastructure'
   | 'Civic & Landscape'
-  | 'Institutional';
+  | 'Institutional'
+  | 'Infrastructure & Industrial'
+  | 'Civic & Public Realm'
+  | 'Commercial & Facade Design'
+  | 'Residential & Technical Approvals';
 
 export interface TechnicalDrawing {
   id: string;
@@ -20,11 +24,21 @@ export interface TechnicalDrawing {
   drawingNumber?: string;
   scale?: string;
   fileSource?: string;
+  downloadUrl?: string;
   type: 'Floor Plan' | 'Elevation' | 'Section' | 'Detail' | 'Site Plan' | 'Technical Drawing';
   image: string;
   description: string;
   caption?: string;
   annotations?: string[];
+}
+
+export interface ProjectDocument {
+  title: string;
+  filename: string;
+  url: string;
+  size?: string;
+  description?: string;
+  type?: string;
 }
 
 export interface Project {
@@ -49,6 +63,13 @@ export interface Project {
   ffl?: string;
   eavesHeight?: string;
   ridgeHeight?: string;
+  seoTitle?: string;
+  metaDescription?: string;
+  architecturalStory?: string;
+  timelineStages?: string[];
+  pdfDocuments?: ProjectDocument[];
+  factsMatrix?: Record<string, string>;
+  challengesAndSolutions?: Array<{ challenge: string; solution: string }>;
   specifications: {
     area?: string;
     duration?: string;

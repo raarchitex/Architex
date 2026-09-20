@@ -90,21 +90,21 @@ export function Header({ isTransparentInitially = false }: { isTransparentInitia
         id="main-header"
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 w-full ${
           isScrolled
-            ? 'bg-[#ffffff]/95 backdrop-blur-md border-b border-[#e5e2d9] py-3.5 shadow-[0_4px_24px_rgba(0,0,0,0.06)]'
+            ? 'bg-[#ffffff]/95 backdrop-blur-md border-b border-[#e5e2d9] py-2 sm:py-2.5 shadow-[0_4px_24px_rgba(0,0,0,0.06)]'
             : isTransparentInitially
-            ? 'bg-gradient-to-b from-black/70 via-black/40 to-transparent py-4 lg:py-5'
-            : 'bg-[#ffffff] border-b border-[#e5e2d9] py-4'
+            ? 'bg-gradient-to-b from-black/75 via-black/45 to-transparent py-3 sm:py-3.5 lg:py-4'
+            : 'bg-[#ffffff] border-b border-[#e5e2d9] py-2.5 sm:py-3'
         }`}
       >
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between w-full">
-          {/* ACHITEX Official Logo linking to Home Page */}
+          {/* RAARCHITEX Official Logo linking to Home Page */}
           <Link
             id="header-home-logo-link"
             href="/"
-            className="flex items-center group transition-transform active:scale-95"
-            aria-label="ACHITEX Home Page"
+            className="flex items-center shrink-0 group transition-transform active:scale-95"
+            aria-label="RAARCHITEX Home Page"
           >
-            <Logo isDarkBackground={isDarkHeroText} />
+            <Logo isDarkBackground={isDarkHeroText} size="md" />
           </Link>
 
           {/* Desktop Navigation Links positioned on the rightmost side */}

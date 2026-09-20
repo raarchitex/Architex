@@ -41,7 +41,6 @@ export function KeyFeaturesSection() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 sm:mb-16 gap-6">
           <div className="max-w-3xl">
             <div className="flex items-center gap-2 mb-3">
-              <span className="w-2.5 h-[2px] bg-[#D01020]" />
               <span className="text-xs font-mono font-bold uppercase tracking-[0.22em] text-[#D01020]">
                 WHY HOMEOWNERS CHOOSE US
               </span>
@@ -332,7 +331,7 @@ export function KeyFeaturesSection() {
               </h3>
 
               <p className="text-sm text-[#4b5563] leading-relaxed font-light mb-6">
-                Never settled on the first standard sketch. We provide multiple creative design directions—from open-plan wraps to cantilevered balconies and courtyard atriums.
+                Never settled on the first standard sketch. We provide multiple creative design directions from open-plan wraps to cantilevered balconies and courtyard atriums.
               </p>
             </div>
 
@@ -359,7 +358,7 @@ export function KeyFeaturesSection() {
               Want to see how these advantages apply to your home?
             </h4>
             <p className="text-xs sm:text-sm text-[#6b7280]">
-              Book an initial discovery consultation with an ACHITEX chartered residential architect.
+              Book an initial discovery consultation with an RAARCHITEX chartered residential architect.
             </p>
           </div>
           <Link

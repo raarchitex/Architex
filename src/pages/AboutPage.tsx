@@ -50,7 +50,7 @@ export function AboutPage() {
                 </h2>
 
                 <p className="text-base sm:text-lg text-[#4a4740] leading-relaxed font-light">
-                  Real Life Architecture approaches every commission with clarity, creativity, and close attention to the lifestyle of those who will use the building. We understand that a home is more than an arrangement of rooms—it is where daily memories unfold.
+                  Real Life Architecture approaches every commission with clarity, creativity, and close attention to the lifestyle of those who will use the building. We understand that a home is more than an arrangement of rooms; it is where daily memories unfold.
                 </p>
 
                 <p className="text-sm sm:text-base text-[#5c5850] leading-relaxed font-light">

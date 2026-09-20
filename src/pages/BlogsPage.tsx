@@ -109,7 +109,7 @@ const BLOG_POSTS: BlogPost[] = [
     excerpt: 'Both Crittall steel and ultra-slim aluminium systems offer timeless architectural character, but each excels in different thermal and structural applications.',
     content: [
       'Crittall steel profiles provide the slimmest sightlines available in traditional fenestration. The cold-rolled high-tensile steel delivers unparalleled strength, allowing massive floor-to-ceiling glass screens with narrow 20mm horizontal glazing bars.',
-      'However, steel requires thermal barrier polyamides to prevent thermal bridging in external envelopes. For internal acoustic partitions or live-work loft mezzanines—such as our Jewellery Quarter project—Crittall is peerless in its historic industrial elegance.',
+      'However, steel requires thermal barrier polyamides to prevent thermal bridging in external envelopes. For internal acoustic partitions or live-work loft mezzanines, such as our Jewellery Quarter project, Crittall is peerless in its historic industrial elegance.',
       'For expansive external sliding patio systems spanning 8 to 14 metres, thermally-broken architectural aluminium (such as Reynaers or Schuco) is often superior due to lighter structural weight, integrated floor-flush drainage tracks, and superior weather tightness.',
       'We guide clients through the physical sample mock-ups during RIBA Stage 4 to assess tactile feel, finish patinas, and budget suitability.'
     ],

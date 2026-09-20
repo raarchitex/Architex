@@ -25,12 +25,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12">
           {/* Brand Col */}
           <div className="lg:col-span-4 space-y-4">
-            <Link href="/" className="inline-block focus:outline-none" aria-label="ACHITEX Homepage">
-              <Logo isDarkBackground={false} />
+            <Link href="/" className="inline-block focus:outline-none" aria-label="RAARCHITEX Homepage">
+              <Logo isDarkBackground={false} size="lg" />
             </Link>
 
             <p className="text-xs sm:text-sm text-[#4b5563] leading-relaxed max-w-sm font-light">
-              ACHITEX is a residential architectural and engineering practice dedicated to turning home ideas into bright, comfortable, and beautifully crafted living spaces.
+              RAARCHITEX is a residential architectural and engineering practice dedicated to turning home ideas into bright, comfortable, and beautifully crafted living spaces.
             </p>
 
             <div className="pt-2 flex items-center gap-2 text-xs font-mono text-[#6b7280]">
@@ -130,7 +130,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 mt-10 border-t border-[#e5e7eb] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#6b7280]">
-          <p>&copy; {currentYear} ACHITEX. All rights reserved. Architecture | Design | Engineering.</p>
+          <p>&copy; {currentYear} RAARCHITEX. All rights reserved. Architecture | Design | Engineering.</p>
           <div className="flex items-center gap-6">
             <Link href="/contact" className="hover:text-[#D01020] transition-colors">
               Privacy Policy

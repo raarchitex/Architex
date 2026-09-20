@@ -3,7 +3,7 @@ import { Testimonial } from '../types';
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: 'test-1',
-    quote: 'ACHITEX completely unlocked the potential of our Edwardian home. The rear open-plan pavilion feels like a natural extension of the original house while flooding our kitchen with natural daylight from morning to sunset.',
+    quote: 'RAARCHITEX completely unlocked the potential of our Edwardian home. The rear open-plan pavilion feels like a natural extension of the original house while flooding our kitchen with natural daylight from morning to sunset.',
     name: 'David & Sarah M.',
     project: 'Harborne House Transformation',
     location: 'Harborne, Birmingham',
@@ -11,7 +11,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'test-2',
-    quote: 'Navigating the strict conservation planning process in Edgbaston was something we were very anxious about. ACHITEX prepared an immaculate planning dossier that the council approved without a single objection or delay.',
+    quote: 'Navigating the strict conservation planning process in Edgbaston was something we were very anxious about. RAARCHITEX prepared an immaculate planning dossier that the council approved without a single objection or delay.',
     name: 'Eleanor Vance',
     project: 'Edgbaston Pavilion Extension',
     location: 'Edgbaston, Birmingham',
@@ -35,7 +35,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'test-5',
-    quote: 'Our wrap-around extension created a stunning kitchen-diner and solved all our family storage needs. ACHITEX handled the planning application through the Planning Portal and secured council approval in 7 weeks.',
+    quote: 'Our wrap-around extension created a stunning kitchen-diner and solved all our family storage needs. RAARCHITEX handled the planning application through the Planning Portal and secured council approval in 7 weeks.',
     name: 'Thomas & Claire Wright',
     project: 'Wrap-Around Kitchen Extension',
     location: 'Sutton Coldfield',
@@ -43,7 +43,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'test-6',
-    quote: 'Converting our awkward roof space into a master suite with a Juliet balcony seemed daunting. ACHITEX secured Permitted Development Lawful Development Certificate and delivered flawless steel beam plans.',
+    quote: 'Converting our awkward roof space into a master suite with a Juliet balcony seemed daunting. RAARCHITEX secured Permitted Development Lawful Development Certificate and delivered flawless steel beam plans.',
     name: 'James Thornton',
     project: 'Dormer Loft Master Suite',
     location: 'Leamington Spa',
@@ -51,7 +51,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'test-7',
-    quote: 'We wanted a modern, highly insulated one-off home. ACHITEX took care of site feasibility, council planning hearings, and structural coordination under one roof. We could not be happier with the outcome.',
+    quote: 'We wanted a modern, highly insulated one-off home. RAARCHITEX took care of site feasibility, council planning hearings, and structural coordination under one roof. We could not be happier with the outcome.',
     name: 'Hannah & Robert Davies',
     project: 'Contemporary Bespoke Dwelling',
     location: 'Dorridge, Solihull',

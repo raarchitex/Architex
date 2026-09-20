@@ -16,7 +16,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     id: 'faq-3',
     question: 'How much does an architectural project cost?',
-    answer: 'Architectural fees depend on the size and complexity of your project—whether you simply need planning drawings or a full end-to-end package including 3D renders and building regulations. We provide clear, itemized, fixed-fee quotes before any work starts so you have complete cost certainty with no hidden surprises.',
+    answer: 'Architectural fees depend on the size and complexity of your project, whether you simply need planning drawings or a full end-to-end package including 3D renders and building regulations. We provide clear, itemized, fixed-fee quotes before any work starts so you have complete cost certainty with no hidden surprises.',
     category: 'Fees'
   },
   {

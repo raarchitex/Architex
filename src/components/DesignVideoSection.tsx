@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import { Play, ExternalLink, ShieldCheck, Hammer, Layers, Home } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { Play } from 'lucide-react';
 
 export function DesignVideoSection() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const videoId = 'm4CWaHAQ4wc';
-  const youtubeEmbedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const constructionPhases = [
     { label: 'Groundworks & Footings', detail: 'Trench excavation & damp proofing' },
@@ -12,6 +11,15 @@ export function DesignVideoSection() {
     { label: 'Roof Framing & Slate', detail: 'Timber trusses & weather membrane' },
     { label: 'Architectural Glazing', detail: 'Aluminum bi-folds & flush rooflights' }
   ];
+
+  const handleStartPlay = () => {
+    setIsPlaying(true);
+    if (videoRef.current) {
+      videoRef.current.play().catch((err) => {
+        console.warn('Playback error:', err);
+      });
+    }
+  };
 
   return (
     <section
@@ -23,7 +31,6 @@ export function DesignVideoSection() {
         {/* Section Header */}
         <div className="max-w-3xl mb-8 sm:mb-12">
           <div className="flex items-center gap-2 mb-2.5">
-            <span className="w-2.5 h-[2px] bg-[#D01020]" />
             <span className="text-xs font-mono font-bold uppercase tracking-[0.22em] text-[#D01020]">
               UK RESIDENTIAL CONSTRUCTION
             </span>
@@ -35,7 +42,7 @@ export function DesignVideoSection() {
             Watch a modern UK residential home being built from the ground up.
           </h2>
           <p className="mt-3 text-sm sm:text-base text-[#4b5563] font-light leading-relaxed">
-            Follow the complete real-life transformation—from site excavation, foundation trenches, and structural masonry to roof trusses and architectural glazing.
+            Follow the complete real-life transformation from site excavation, foundation trenches, and structural masonry to roof trusses and architectural glazing.
           </p>
         </div>
 
@@ -43,11 +50,28 @@ export function DesignVideoSection() {
         <div className="relative w-full rounded-sm overflow-hidden bg-[#111827] border border-[#e5e7eb] shadow-[0_8px_30px_rgb(0,0,0,0.08)] group">
           {/* Responsive 16:9 Aspect Ratio Container */}
           <div className="relative w-full pb-[56.25%] sm:pb-[52%] max-h-[720px]">
-            {!isPlaying ? (
-              <div className="absolute inset-0 z-10 flex items-center justify-center cursor-pointer">
-                {/* Video Poster Image from YouTube HQ Thumbnail */}
+            {/* HTML5 Native Video Player */}
+            <video
+              ref={videoRef}
+              src="/videos/design.mp4"
+              poster="/videos/design-poster.jpg"
+              title="UK Residential Construction Video Preview"
+              controls={isPlaying}
+              playsInline
+              preload="metadata"
+              onPlay={() => setIsPlaying(true)}
+              onPause={() => {}}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+
+            {!isPlaying && (
+              <div
+                onClick={handleStartPlay}
+                className="absolute inset-0 z-10 flex items-center justify-center cursor-pointer"
+              >
+                {/* Poster Background */}
                 <img
-                  src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+                  src="/videos/design-poster.jpg"
                   alt="UK Residential Construction Video Preview"
                   className="absolute inset-0 w-full h-full object-cover brightness-[0.88] group-hover:scale-[1.01] group-hover:brightness-[0.95] transition-all duration-500"
                 />
@@ -56,9 +80,12 @@ export function DesignVideoSection() {
                 {/* Big Custom Play Button */}
                 <button
                   type="button"
-                  id="play-construction-youtube-video"
-                  onClick={() => setIsPlaying(true)}
-                  className="relative z-20 flex items-center gap-3.5 px-6 sm:px-8 py-4 bg-[#D01020] text-white font-mono font-bold text-xs uppercase tracking-[0.2em] rounded-sm hover:bg-[#b00d1b] transition-all shadow-xl hover:scale-105 active:scale-95"
+                  id="play-construction-video"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleStartPlay();
+                  }}
+                  className="relative z-20 flex items-center gap-3.5 px-6 sm:px-8 py-4 bg-[#D01020] text-white font-mono font-bold text-xs uppercase tracking-[0.2em] rounded-sm hover:bg-[#b00d1b] transition-all shadow-xl hover:scale-105 active:scale-95 cursor-pointer"
                   aria-label="Play UK residential construction video"
                 >
                   <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
@@ -78,15 +105,6 @@ export function DesignVideoSection() {
                   </div>
                 </div>
               </div>
-            ) : (
-              <iframe
-                id="youtube-construction-iframe"
-                src={youtubeEmbedUrl}
-                title="UK Residential Construction Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full border-0"
-              />
             )}
           </div>
         </div>

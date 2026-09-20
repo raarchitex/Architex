@@ -46,23 +46,23 @@ export const SERVICES: Service[] = [
     ],
     processStages: [
       {
-        title: '01 — Feasibility & Measured Laser Survey',
+        title: '01: Feasibility & Measured Laser Survey',
         description: 'We visit your property, listen to your family lifestyle needs, and perform a millimeter-accurate digital laser survey of existing floor plans, roof heights, and boundary datum.'
       },
       {
-        title: '02 — Creative 3D Concept Design',
+        title: '02: Creative 3D Concept Design',
         description: 'We explore creative layouts, daylighting solutions, and vaulted extensions, presenting photorealistic 3D models and dimensioned plans so you can test options collaboratively.'
       },
       {
-        title: '03 — Statutory Council Planning Application',
+        title: '03: Statutory Council Planning Application',
         description: 'We assemble all statutory drawings, write persuasive planning statements, submit directly through the Planning Portal, and proactively liaise with council officers to approval.'
       },
       {
-        title: '04 — Building Regulations & Structural Pack',
+        title: '04: Building Regulations & Structural Pack',
         description: 'We produce comprehensive technical construction drawings, coordinate structural engineering calculations, and achieve statutory Building Control approval.'
       },
       {
-        title: '05 — Contractor Tender & Construction Support',
+        title: '05: Contractor Tender & Construction Support',
         description: 'We assist with builder tender comparisons and answer technical on-site contractor queries throughout the physical build.'
       }
     ],
@@ -160,15 +160,15 @@ export const SERVICES: Service[] = [
     ],
     processStages: [
       {
-        title: '01 — Initial Property Review',
+        title: '01: Initial Property Review',
         description: 'Provide your address and outline your aspirations for an extension, loft conversion, or remodelling.'
       },
       {
-        title: '02 — Local Council Precedents & Policy Check',
+        title: '02: Local Council Precedents & Policy Check',
         description: 'We review local planning history, Permitted Development allowances, Tree Preservation Orders (TPOs), and council design guides.'
       },
       {
-        title: '03 — Strategic Roadmap & Recommendation',
+        title: '03: Strategic Roadmap & Recommendation',
         description: 'We deliver clear advice on whether to proceed via Prior Approval, Lawful Development Certificate, or Full Planning Permission.'
       }
     ],
@@ -243,15 +243,15 @@ export const SERVICES: Service[] = [
     ],
     processStages: [
       {
-        title: '01 — Lifestyle Briefing',
+        title: '01: Lifestyle Briefing',
         description: 'We explore how you use your current spaces, what feels cramped, and what your dream family lifestyle looks like.'
       },
       {
-        title: '02 — Concept Generation',
+        title: '02: Concept Generation',
         description: 'We generate innovative architectural options exploring varied rooflines, window placements, and kitchen-living configurations.'
       },
       {
-        title: '03 — 3D Walkthrough & Refinement',
+        title: '03: 3D Walkthrough & Refinement',
         description: 'We present high-definition 3D views and refine the selected concept iteratively until you are 100% in love with the design.'
       }
     ],
@@ -287,7 +287,7 @@ export const SERVICES: Service[] = [
         answer: 'Absolutely. Our creative process is completely collaborative. We explore alternatives and refine the scheme until it perfectly matches your vision and budget.'
       }
     ],
-    relatedProjectSlugs: ['harborne-house', 'solihull-courtyard-villa', 'monolith-veil-house']
+    relatedProjectSlugs: ['harborne-house', 'solihull-courtyard-villa', 'contemporary-kinetic-screen-facade-study']
   },
   {
     id: 'planning-permissions',
@@ -332,15 +332,15 @@ export const SERVICES: Service[] = [
     ],
     processStages: [
       {
-        title: '01 — Drawing Package Assembly',
+        title: '01: Drawing Package Assembly',
         description: 'We draft statutory 1:50 and 1:100 floor plans, roof layouts, cross-sections, and contextual street elevations.'
       },
       {
-        title: '02 — Formal Planning Portal Submission',
+        title: '02: Formal Planning Portal Submission',
         description: 'We submit the application directly to your local planning authority and ensure rapid validation.'
       },
       {
-        title: '03 — Officer Liaison to Decision Notice',
+        title: '03: Officer Liaison to Decision Notice',
         description: 'We monitor progress across the statutory 8-week timeline, answer officer queries, and secure your Decision Notice.'
       }
     ],
@@ -415,15 +415,15 @@ export const SERVICES: Service[] = [
     ],
     processStages: [
       {
-        title: '01 — Technical Detailing & Specification',
+        title: '01: Technical Detailing & Specification',
         description: 'We draft detailed construction sections detailing foundation depths, insulation layers, thermal breaks, and roof venting.'
       },
       {
-        title: '02 — Structural Engineering Integration',
+        title: '02: Structural Engineering Integration',
         description: 'We collaborate with structural engineers to coordinate steel beam schedules and padstones directly onto architectural drawings.'
       },
       {
-        title: '03 — Building Control Full Plans Approval',
+        title: '03: Building Control Full Plans Approval',
         description: 'We submit the pack to Building Control, manage plan checks, and secure statutory approval before building work commences.'
       }
     ],

@@ -22,7 +22,6 @@ export function ImageBreak() {
       <div className="absolute inset-0 flex items-end justify-between p-6 sm:p-12 lg:p-16 max-w-[1360px] mx-auto w-full">
         <div className="max-w-xl text-[#f4f1ea]">
           <div className="flex items-center gap-2.5 mb-2.5">
-            <span className="inline-block w-6 h-[1px] bg-[#f4f1ea]" />
             <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#e8e4d8]">
               ARCHITECTURAL EXCELLENCE
             </span>

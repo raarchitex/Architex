@@ -80,7 +80,7 @@ export function ServiceDetailPage({ slug }: { slug: string }) {
               <div className="flex items-center gap-2.5 mb-3">
                 <span className="w-6 h-[2px] bg-[#D01020]" />
                 <span className="text-xs font-mono font-bold tracking-[0.22em] uppercase text-white/90">
-                  ACHITEX RESIDENTIAL SERVICE
+                  RAARCHITEX RESIDENTIAL SERVICE
                 </span>
               </div>
 
@@ -239,7 +239,7 @@ export function ServiceDetailPage({ slug }: { slug: string }) {
                 {service.benefits && service.benefits.length > 0 && (
                   <div className="pt-5 border-t border-[#e5e7eb] space-y-3">
                     <span className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-[#6b7280] block">
-                      WHY HOMEOWNERS CHOOSE ACHITEX
+                      WHY HOMEOWNERS CHOOSE RAARCHITEX
                     </span>
                     <ul className="space-y-3">
                       {service.benefits.map((b, idx) => (

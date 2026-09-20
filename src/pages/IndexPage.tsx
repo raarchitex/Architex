@@ -3,7 +3,7 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { PROJECTS } from '../data/projects';
 import { Link } from '../context/NavigationContext';
-import { ArrowUpRight, Search, ArrowUpDown, FileText, Box, ShieldCheck } from 'lucide-react';
+import { ArrowUpRight, Search, ArrowUpDown, FileText, ShieldCheck } from 'lucide-react';
 import { ProjectCategory } from '../types';
 
 type SortField = 'projectNumber' | 'title' | 'category' | 'location' | 'year' | 'status';
@@ -223,8 +223,8 @@ export function IndexPage() {
                         </div>
                       ) : (
                         <div className="flex items-center gap-1 text-[#70706B]">
-                          <Box className="w-3 h-3 text-amber-600" />
-                          <span>3D Model</span>
+                          <FileText className="w-3 h-3 text-[#70706B]" />
+                          <span>Technical Study</span>
                         </div>
                       )}
                     </td>

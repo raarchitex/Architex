@@ -10,7 +10,6 @@ export function IntroSection() {
           {/* Left Text Column */}
           <div className="lg:col-span-6 space-y-6">
             <div className="flex items-center gap-2.5">
-              <span className="inline-block w-6 h-[1px] bg-[#1a1a1a]" />
               <span className="text-[11px] font-semibold tracking-[0.25em] uppercase text-[#736e65]">
                 ABOUT REAL LIFE ARCHITECTURE
               </span>

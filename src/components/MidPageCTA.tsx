@@ -7,11 +7,9 @@ export function MidPageCTA() {
     <section id="mid-page-cta" className="py-20 sm:py-24 lg:py-28 bg-[#ffffff] text-[#111827] border-y border-[#e5e7eb] relative overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-8 lg:px-12 relative z-10 text-center">
         <div className="inline-flex items-center gap-2 mb-4">
-          <span className="w-6 h-[2px] bg-[#D01020]" />
           <span className="text-[11px] font-mono font-bold tracking-[0.25em] uppercase text-[#D01020]">
             READY TO START?
           </span>
-          <span className="w-6 h-[2px] bg-[#D01020]" />
         </div>
 
         <h2 className="font-sans text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.12] max-w-3xl mx-auto mb-6 text-[#111827]">

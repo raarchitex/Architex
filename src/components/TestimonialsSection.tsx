@@ -31,7 +31,6 @@ export function TestimonialsSection() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 sm:mb-16 gap-8">
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-3">
-              <span className="w-2.5 h-[2px] bg-[#D01020]" />
               <span className="text-xs font-mono font-bold uppercase tracking-[0.22em] text-[#D01020]">
                 CLIENT TESTIMONIALS &amp; TRUSTPILOT
               </span>
@@ -40,7 +39,7 @@ export function TestimonialsSection() {
               id="testimonials-heading"
               className="text-3xl sm:text-4xl lg:text-5xl font-sans font-bold text-[#111827] tracking-tight leading-[1.12]"
             >
-              Real stories from homeowners who built with ACHITEX.
+              Real stories from homeowners who built with RAARCHITEX.
             </h2>
             <p className="mt-4 text-base sm:text-lg text-[#4b5563] font-light leading-relaxed">
               Every review is independently verified through Trustpilot from homeowners across the UK.

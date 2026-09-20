@@ -1,7 +1,7 @@
 import React from 'react';
 import { PROJECTS } from '../data/projects';
 import { Link } from '../context/NavigationContext';
-import { ArrowRight, MapPin, Calendar, Box, FileText } from 'lucide-react';
+import { ArrowRight, MapPin, Calendar, FileText } from 'lucide-react';
 
 export function FeaturedProject() {
   const latestProject = PROJECTS.find((p) => p.latest) || PROJECTS[0];
@@ -13,7 +13,6 @@ export function FeaturedProject() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12 sm:mb-16">
           <div>
             <div className="flex items-center gap-2.5 mb-3">
-              <span className="inline-block w-6 h-[1px] bg-[#1a1a1a]" />
               <span className="text-[11px] font-semibold tracking-[0.25em] uppercase text-[#736e65]">
                 OUR LATEST PROJECT
               </span>
@@ -52,10 +51,6 @@ export function FeaturedProject() {
               <div className="absolute top-4 left-4 flex gap-2">
                 <span className="bg-[#f4f1ea]/95 backdrop-blur-sm px-3.5 py-1 text-[10px] font-mono font-semibold uppercase tracking-[0.2em] text-[#1a1a1a] border border-[#dcd8cc]">
                   {latestProject.category}
-                </span>
-                <span className="bg-[#1a1a1a]/90 backdrop-blur-sm px-3 py-1 text-[9px] font-mono font-semibold uppercase tracking-[0.15em] text-[#f4f1ea] border border-white/20 flex items-center gap-1.5">
-                  <Box className="w-3 h-3 text-[#C51B18]" />
-                  Interactive 3D Model
                 </span>
               </div>
             </Link>
@@ -116,7 +111,7 @@ export function FeaturedProject() {
                 href={`/projects/${latestProject.slug}`}
                 className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#1a1a1a] text-[#f4f1ea] text-[11px] font-semibold uppercase tracking-[0.2em] hover:bg-[#333333] transition-all group"
               >
-                <span>View Project & 3D Model</span>
+                <span>View Full Project Case Study</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>

@@ -3,7 +3,7 @@ import { HeroSlide } from '../types';
 export const HERO_SLIDES: HeroSlide[] = [
   {
     id: 'slide-1',
-    eyebrow: 'ACHITEX • ARCHITECTURE & ENGINEERING',
+    eyebrow: 'RAARCHITEX • ARCHITECTURE & ENGINEERING',
     title: 'Spaces designed around the way you live.',
     description: 'Personal, director-led architectural care from early ideas to planning approval and completed construction.',
     image: '/images/hero/hero-slide-1-contemporary-extension.jpg',

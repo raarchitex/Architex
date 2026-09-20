@@ -13,7 +13,6 @@ export function ServicesGrid({ limit }: { limit?: number }) {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12 sm:mb-14">
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-2">
-              <span className="w-2.5 h-[2px] bg-[#D01020]" />
               <span className="text-xs font-mono font-bold uppercase tracking-[0.22em] text-[#D01020]">
                 OUR ARCHITECTURAL SERVICES
               </span>

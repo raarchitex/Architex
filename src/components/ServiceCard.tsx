@@ -49,7 +49,7 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
 
         {/* Floating Quick View Tag */}
         <div className="absolute bottom-4 left-4 bg-black/75 backdrop-blur-md px-3 py-1 text-[10px] font-mono font-semibold text-white rounded tracking-widest uppercase">
-          ACHITEX &bull; {service.deliverables.length} DELIVERABLES
+          RAARCHITEX &bull; {service.deliverables.length} DELIVERABLES
         </div>
       </Link>
 

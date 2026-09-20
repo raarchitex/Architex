@@ -97,7 +97,6 @@ export function HeroSlider() {
         <div className="max-w-3xl">
           {/* Eyebrow */}
           <div className="flex items-center gap-2.5 mb-3 sm:mb-4">
-            <span className="inline-block w-6 h-[2px] bg-[#D01020]" />
             <span className="text-[11px] sm:text-[12px] font-mono font-bold tracking-[0.25em] uppercase text-white drop-shadow-sm">
               {currentSlide.eyebrow}
             </span>
@@ -164,7 +163,7 @@ export function HeroSlider() {
           </div>
 
           <div className="text-[11px] font-mono text-white/70 tracking-widest uppercase">
-            ACHITEX &bull; UK RESIDENTIAL
+            RAARCHITEX &bull; UK RESIDENTIAL
           </div>
         </div>
       </div>

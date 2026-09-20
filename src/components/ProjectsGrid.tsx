@@ -6,6 +6,10 @@ import { ChevronDown, Check } from 'lucide-react';
 
 export const ARCHITECTURAL_CATEGORIES: { id: ProjectCategory; label: string }[] = [
   { id: 'All', label: 'All Projects' },
+  { id: 'Infrastructure & Industrial', label: 'Infrastructure & Industrial' },
+  { id: 'Civic & Public Realm', label: 'Civic & Public Realm' },
+  { id: 'Commercial & Facade Design', label: 'Commercial & Facade Design' },
+  { id: 'Residential & Technical Approvals', label: 'Residential & Technical Approvals' },
   { id: 'Extensions', label: 'Extensions' },
   { id: 'Loft Conversions', label: 'Loft Conversions' },
   { id: 'New Builds', label: 'New Builds' },
@@ -66,7 +70,6 @@ export function ProjectsGrid({
           <div className="max-w-2xl">
             {eyebrow && (
               <div className="flex items-center gap-2 mb-2">
-                <span className="w-2.5 h-[2px] bg-[#D01020]" />
                 <span className="text-xs font-mono font-bold uppercase tracking-[0.22em] text-[#D01020]">
                   {eyebrow}
                 </span>

@@ -1,4 +1,4 @@
-import React, { useState, Suspense, lazy } from 'react';
+import React, { useState } from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { PROJECTS } from '../data/projects';
@@ -17,18 +17,12 @@ import {
   CheckCircle2,
   Maximize2,
   Ruler,
-  Box,
   FileText,
   ShieldCheck,
   Compass,
   Download,
   ExternalLink,
 } from 'lucide-react';
-
-// Code-splitting performance optimization: Lazy load the Three.js 3D spatial viewer
-const Project3DViewer = lazy(() =>
-  import('../components/Project3DViewer').then((mod) => ({ default: mod.Project3DViewer }))
-);
 
 export function ProjectDetailPage({ slug }: { slug: string }) {
   const { navigate } = useNavigation();
@@ -196,7 +190,7 @@ export function ProjectDetailPage({ slug }: { slug: string }) {
         {/* Main Content Body */}
         <div className="py-12 sm:py-20 max-w-[1500px] mx-auto px-4 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-            {/* Left Column: Narrative, 3D Interactive Model, Technical Drawings */}
+            {/* Left Column: Narrative, Drawings & Document Packages, Technical Specifications */}
             <div className="lg:col-span-8 space-y-14">
               {/* Narrative Section: Brief & Architectural Approach */}
               <section className="space-y-6">
@@ -230,6 +224,49 @@ export function ProjectDetailPage({ slug }: { slug: string }) {
                     </p>
                   </div>
                 </div>
+
+                {/* Architectural Story if available */}
+                {project.architecturalStory && (
+                  <div className="pt-6 border-t border-[#E5E5DF] space-y-2.5">
+                    <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-[#111111] flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#D01020]" />
+                      03 / Design Evolution & Architectural Story
+                    </h3>
+                    <p className="text-xs sm:text-sm text-[#4b5563] leading-relaxed font-light bg-[#f9fafb] p-5 border-l-2 border-[#D01020]">
+                      {project.architecturalStory}
+                    </p>
+                  </div>
+                )}
+
+                {/* Challenges & Solutions */}
+                {project.challengesAndSolutions && project.challengesAndSolutions.length > 0 && (
+                  <div className="pt-6 border-t border-[#E5E5DF] space-y-4">
+                    <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-[#111111] flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#1C3B52]" />
+                      Engineering Challenges & Documented Solutions
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {project.challengesAndSolutions.map((cs, idx) => (
+                        <div key={idx} className="bg-white border border-[#E5E5DF] p-4 sm:p-5 space-y-2">
+                          <span className="text-[10px] font-mono text-[#D01020] uppercase font-bold tracking-wider block">
+                            Challenge {idx + 1}
+                          </span>
+                          <p className="text-xs text-[#111111] font-medium leading-relaxed">
+                            {cs.challenge}
+                          </p>
+                          <div className="pt-2 border-t border-[#f3f4f6]">
+                            <span className="text-[10px] font-mono text-emerald-700 uppercase font-bold tracking-wider block mb-1">
+                              Technical Solution
+                            </span>
+                            <p className="text-xs text-[#4b5563] leading-relaxed font-light">
+                              {cs.solution}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </section>
 
               {/* TECHNICAL DRAWINGS VIEWER (If project has drawings) */}
@@ -256,40 +293,75 @@ export function ProjectDetailPage({ slug }: { slug: string }) {
                 </section>
               )}
 
-              {/* INTERACTIVE 3D SPATIAL & DAYLIGHT SIMULATION (Code-split with Suspense) */}
-              <section className="pt-10 border-t border-[#E5E5DF] space-y-6">
-                <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-                  <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <Box className="w-3.5 h-3.5 text-[#1C3B52]" />
-                      <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#70706B]">
-                        INTERACTIVE 3D BIM & MASSING STUDY
+              {/* DOWNLOADABLE STATUTORY & TECHNICAL PDF ARCHIVE */}
+              {project.pdfDocuments && project.pdfDocuments.length > 0 && (
+                <section className="pt-10 border-t border-[#E5E5DF] space-y-6">
+                  <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                    <div>
+                      <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#D01020] block mb-1">
+                        OFFICIAL TECHNICAL PACKAGES & COMPLIANCE ARCHIVE
                       </span>
+                      <h3 className="font-serif text-2xl sm:text-3xl font-normal text-[#111111]">
+                        Original Vector PDF Drawing Packages
+                      </h3>
                     </div>
-                    <h3 className="font-serif text-2xl sm:text-3xl font-normal text-[#111111]">
-                      3D Spatial Geometry & Daylight Path
-                    </h3>
+                    <span className="text-xs font-mono text-[#70706B]">
+                      {project.pdfDocuments.length} PDF PACKAGES VERIFIED
+                    </span>
                   </div>
-                  <p className="text-xs font-mono text-[#70706B]">
-                    Drag to orbit • Scroll to zoom • Exploded axonometric
-                  </p>
-                </div>
 
-                <Suspense
-                  fallback={
-                    <div className="h-[500px] w-full bg-[#F4F4F0] border border-[#E5E5DF] flex flex-col items-center justify-center text-[#70706B] font-mono text-xs space-y-2 animate-pulse">
-                      <Box className="w-6 h-6 animate-spin" />
-                      <span>Initializing 3D Spatial Canvas...</span>
-                    </div>
-                  }
-                >
-                  <Project3DViewer
-                    projectTitle={project.title}
-                    projectCategory={project.category}
-                    dimensions={project.specifications.dimensions}
-                  />
-                </Suspense>
-              </section>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {project.pdfDocuments.map((doc, idx) => (
+                      <div
+                        key={idx}
+                        className="bg-white border border-[#E5E5DF] p-5 flex flex-col justify-between hover:border-[#111111] transition-colors shadow-sm group"
+                      >
+                        <div className="space-y-2 mb-4">
+                          <div className="flex items-center justify-between text-[10px] font-mono text-[#70706B]">
+                            <span className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-red-50 text-[#D01020] font-bold border border-red-100 rounded">
+                              <FileText className="w-3 h-3" />
+                              PDF DOCUMENT
+                            </span>
+                            {doc.size && <span>{doc.size}</span>}
+                          </div>
+                          <h4 className="font-serif text-lg font-normal text-[#111111] group-hover:text-[#D01020] transition-colors">
+                            {doc.title}
+                          </h4>
+                          {doc.description && (
+                            <p className="text-xs text-[#70706B] font-light leading-relaxed">
+                              {doc.description}
+                            </p>
+                          )}
+                          <p className="text-[11px] font-mono text-[#9ca3af]">
+                            File: {doc.filename}
+                          </p>
+                        </div>
+
+                        <div className="flex items-center gap-3 pt-3 border-t border-[#f3f4f6]">
+                          <a
+                            href={doc.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 inline-flex items-center justify-center gap-2 py-2 px-3 bg-[#111111] hover:bg-[#D01020] text-white text-[11px] font-mono uppercase tracking-wider transition-colors"
+                          >
+                            <ExternalLink className="w-3.5 h-3.5" />
+                            <span>View in Browser</span>
+                          </a>
+                          <a
+                            href={doc.url}
+                            download
+                            className="inline-flex items-center justify-center gap-1.5 py-2 px-3 border border-[#d1d5db] hover:border-[#111111] text-[#111111] text-[11px] font-mono uppercase tracking-wider transition-colors"
+                            title="Download original unedited PDF"
+                          >
+                            <Download className="w-3.5 h-3.5" />
+                            <span className="sr-only sm:not-sr-only sm:inline">Download</span>
+                          </a>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
 
               {/* MATERIAL & TECHNICAL SPECIFICATION SCHEDULE */}
               <section className="pt-10 border-t border-[#E5E5DF] space-y-6">
@@ -340,6 +412,30 @@ export function ProjectDetailPage({ slug }: { slug: string }) {
 
             {/* Right Sidebar: Key Metrics & Technical Summary */}
             <div className="lg:col-span-4 space-y-8">
+              {/* Core Facts Matrix */}
+              {project.factsMatrix && (
+                <div className="bg-[#FFFFFF] border border-[#E5E5DF] p-6 sm:p-7 space-y-4 shadow-sm">
+                  <div className="flex items-center justify-between pb-3 border-b border-[#E5E5DF]">
+                    <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-[#111111] flex items-center gap-2">
+                      <Building className="w-3.5 h-3.5 text-[#D01020]" />
+                      Core Facts Matrix
+                    </h3>
+                    <span className="text-[10px] font-mono text-[#D01020] bg-red-50 px-2 py-0.5 border border-red-100 font-bold">
+                      KEY METRICS
+                    </span>
+                  </div>
+
+                  <div className="space-y-3 text-xs font-mono">
+                    {Object.entries(project.factsMatrix).map(([key, value]) => (
+                      <div key={key} className="pb-2 border-b border-[#f3f4f6] last:border-b-0">
+                        <span className="text-[10px] text-[#70706B] uppercase block mb-0.5">{key}</span>
+                        <span className="font-semibold text-[#111111] leading-snug block">{value}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Dimensions Card */}
               {project.specifications.dimensions && (
                 <div className="bg-[#FFFFFF] border border-[#E5E5DF] p-6 sm:p-7 space-y-4 shadow-sm">
@@ -421,6 +517,26 @@ export function ProjectDetailPage({ slug }: { slug: string }) {
                   </Link>
                 </div>
               </div>
+
+              {/* Project Phasing & Stages */}
+              {project.timelineStages && project.timelineStages.length > 0 && (
+                <div className="bg-[#FFFFFF] border border-[#E5E5DF] p-6 sm:p-7 space-y-4 shadow-sm">
+                  <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-[#111111] pb-3 border-b border-[#E5E5DF] flex items-center gap-2">
+                    <Calendar className="w-3.5 h-3.5 text-[#1C3B52]" />
+                    Project Phasing & Stages
+                  </h3>
+                  <ol className="space-y-2.5 text-xs font-mono">
+                    {project.timelineStages.map((stage, idx) => (
+                      <li key={idx} className="flex items-start gap-2.5 text-[#374151]">
+                        <span className="w-5 h-5 rounded-full bg-[#111827] text-white text-[10px] flex items-center justify-center shrink-0 font-bold mt-0.5">
+                          {idx + 1}
+                        </span>
+                        <span className="leading-tight">{stage}</span>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              )}
             </div>
           </div>
         </div>

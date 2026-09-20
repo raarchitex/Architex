@@ -11,6 +11,7 @@ import {
   RotateCcw,
   SlidersHorizontal,
   ExternalLink,
+  Download,
   Ruler,
   Info
 } from 'lucide-react';
@@ -161,6 +162,20 @@ export function ProjectDrawingsViewer({ drawings, projectTitle }: ProjectDrawing
           </div>
 
           <div className="flex items-center gap-2 shrink-0">
+            {currentDrawing.downloadUrl && (
+              <a
+                href={currentDrawing.downloadUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+                className="inline-flex items-center gap-1.5 px-3 py-2 border border-[#E5E5DF] hover:bg-[#F4F4F0] text-[#111111] text-[11px] font-mono uppercase tracking-wider transition-colors cursor-pointer"
+                title="Download / View Original PDF"
+              >
+                <Download className="w-3.5 h-3.5 text-[#1C3B52]" />
+                <span>PDF Sheet</span>
+              </a>
+            )}
+
             <button
               id="expand-drawing-modal-btn"
               type="button"
@@ -168,7 +183,7 @@ export function ProjectDrawingsViewer({ drawings, projectTitle }: ProjectDrawing
               className="inline-flex items-center gap-2 px-4 py-2 bg-[#111111] hover:bg-[#262626] text-[#FBFBF9] text-[11px] font-mono uppercase tracking-[0.16em] transition-colors cursor-pointer"
             >
               <Maximize2 className="w-3.5 h-3.5" />
-              <span>Inspect High-Res (Pan / Zoom)</span>
+              <span>Inspect High-Res</span>
             </button>
 
             <a
@@ -176,7 +191,7 @@ export function ProjectDrawingsViewer({ drawings, projectTitle }: ProjectDrawing
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 border border-[#E5E5DF] hover:bg-[#F4F4F0] text-[#70706B] hover:text-[#111111] transition-colors"
-              title="Open Raw Vector File in New Tab"
+              title="Open Raw File in New Tab"
             >
               <ExternalLink className="w-4 h-4" />
             </a>
@@ -309,6 +324,20 @@ export function ProjectDrawingsViewer({ drawings, projectTitle }: ProjectDrawing
               >
                 <SlidersHorizontal className="w-4 h-4" />
               </button>
+
+              {currentDrawing.downloadUrl && (
+                <a
+                  href={currentDrawing.downloadUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+                  className="p-2 border border-white/20 bg-white/5 text-white/80 hover:text-white hover:bg-white/10 transition-colors flex items-center gap-1.5 text-xs font-mono"
+                  title="Download Original PDF Sheet"
+                >
+                  <Download className="w-4 h-4 text-emerald-400" />
+                  <span className="hidden sm:inline">PDF</span>
+                </a>
+              )}
 
               {/* Close Button */}
               <button

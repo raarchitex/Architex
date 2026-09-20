@@ -17,11 +17,9 @@ export function FAQSection({ limit }: { limit?: number }) {
       <div className="max-w-[1040px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
           <div className="inline-flex items-center gap-2 mb-2">
-            <span className="w-2.5 h-[2px] bg-[#D01020]" />
             <span className="text-xs font-mono font-bold uppercase tracking-[0.22em] text-[#D01020]">
               FREQUENTLY ASKED QUESTIONS
             </span>
-            <span className="w-2.5 h-[2px] bg-[#D01020]" />
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-sans font-bold text-[#111111] tracking-tight">
             Clear answers to common questions.

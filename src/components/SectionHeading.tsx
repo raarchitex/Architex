@@ -29,7 +29,6 @@ export function SectionHeading({
             align === 'center' ? 'justify-center' : 'justify-start'
           }`}
         >
-          <span className={`inline-block w-6 h-[1px] ${dark ? 'bg-[#c5beb3]' : 'bg-[#1a1a1a]'}`} />
           <span
             className={`text-[11px] font-semibold tracking-[0.25em] uppercase ${
               dark ? 'text-[#c5beb3]' : 'text-[#736e65]'

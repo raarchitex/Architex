@@ -11,7 +11,6 @@ export function HomeContactSection() {
           <div className="lg:col-span-5 space-y-6">
             <div className="space-y-2.5">
               <div className="flex items-center gap-2">
-                <span className="w-2.5 h-[2px] bg-[#D01020]" />
                 <span className="text-xs font-mono font-bold uppercase tracking-[0.22em] text-[#D01020]">
                   GET IN TOUCH
                 </span>

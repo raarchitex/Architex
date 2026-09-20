@@ -68,7 +68,7 @@ const FAQ_DATA: FAQItem[] = [
     question: 'How do architects calculate their professional fees?',
     answer: 'At Real Life Architecture, we offer transparent fee proposals tailored to project scope. Fees are generally structured as fixed lump-sum stages tied directly to the RIBA Plan of Work (Concept RIBA 1-2, Planning RIBA 3, Technical Detailing & Building Regulations RIBA 4, and Contract Administration RIBA 5-6). For comprehensive architectural services from sketch to completion, architectural fees for bespoke residential projects typically range between 8% to 14% of the net construction budget, depending on project scale, structural complexity, and heritage status.',
     keyPoints: [
-      'Staged fixed lump-sum milestones—you only pay for each completed RIBA stage.',
+      'Staged fixed lump-sum milestones: you only pay for each completed RIBA stage.',
       'Clear transparent written fee proposals detailing exact deliverables and drawings.',
       'No hidden surprise costs: statutory fees and specialist surveys are clearly itemized in advance.'
     ]
@@ -160,7 +160,7 @@ const FAQ_DATA: FAQItem[] = [
     id: 'faq-modern-materials-conservation',
     category: 'Conservation & Heritage',
     question: 'Can I use contemporary materials like charred timber, bronze, or zinc in a Conservation Area?',
-    answer: 'Yes, absolutely. Conservation officers and national historic guidelines (HE/Historic England) encourage honest, high-quality contemporary design over cheap pastiche imitation. If an extension clearly expresses the craftsmanship of its time using noble, durable materials—such as standing seam bronze, patinated zinc, or Shou Sugi Ban charred Accoya—it is frequently supported, provided its massing, scale, and detailing respect the primary heritage building.',
+    answer: 'Yes, absolutely. Conservation officers and national historic guidelines (HE/Historic England) encourage honest, high-quality contemporary design over cheap pastiche imitation. If an extension clearly expresses the craftsmanship of its time using noble, durable materials, such as standing seam bronze, patinated zinc, or Shou Sugi Ban charred Accoya, it is frequently supported, provided its massing, scale, and detailing respect the primary heritage building.',
     keyPoints: [
       'High-quality contemporary contrast is welcomed when executed with premium materials.',
       'Structural glass links provide a clear, reversible threshold separating old from new.',

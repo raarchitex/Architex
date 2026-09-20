@@ -46,7 +46,6 @@ export function DifferenceSection() {
                     <span className="font-mono text-2xl sm:text-3xl font-light text-[#736e65]">
                       {item.number}
                     </span>
-                    <span className="h-[1px] w-8 bg-[#dcd8cc]" />
                   </div>
 
                   <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#1a1a1a] tracking-tight">

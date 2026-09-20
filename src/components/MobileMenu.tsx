@@ -61,7 +61,7 @@ export function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuProps) {
           onClick={onClose}
           className="flex items-center"
         >
-          <Logo isDarkBackground={false} />
+          <Logo isDarkBackground={false} size="sm" />
         </Link>
         <button
           id="close-mobile-menu-btn"

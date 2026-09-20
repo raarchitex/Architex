@@ -20,7 +20,7 @@ export const ARTICLES: Article[] = [
         {
           heading: '1. Diagnosing the Original Footprint',
           text: [
-            'Historic properties were configured around distinct functional rooms—parlours, sculleries, and outhouses. The primary architectural challenge is uniting these disconnected ground floor spaces without compromising the structural stability or front-facing heritage value of the home.',
+            'Historic properties were configured around distinct functional rooms: parlours, sculleries, and outhouses. The primary architectural challenge is uniting these disconnected ground floor spaces without compromising the structural stability or front-facing heritage value of the home.',
             'By identifying non-loadbearing partitions and coordinating strategic steelwork insertions, we can create generous kitchen, dining, and family gathering spaces that flow effortlessly into the garden.'
           ],
           quote: 'The most successful historic home transformations do not mimic the past; they create a respectful, contemporary conversation between old and new.'
@@ -37,7 +37,7 @@ export const ARTICLES: Article[] = [
         {
           heading: '3. Material Continuity and Contrast',
           text: [
-            'Rather than trying to match century-old handmade bricks with modern factory duplicates, high-quality contemporary additions often look best when using contrasting yet complementary materials—such as blackened timber cladding, tactile engineering bricks, zinc fascias, and slimline aluminium glazed doors.'
+            'Rather than trying to match century-old handmade bricks with modern factory duplicates, high-quality contemporary additions often look best when using contrasting yet complementary materials, such as blackened timber cladding, tactile engineering bricks, zinc fascias, and slimline aluminium glazed doors.'
           ]
         }
       ],
@@ -105,7 +105,7 @@ export const ARTICLES: Article[] = [
           heading: '1. Eliminating Spatial Uncertainty',
           text: [
             '3D architectural visualisations accurately simulate room heights, natural lighting conditions at different times of day, and sightlines between indoor and outdoor zones.',
-            'This allows you to walk through spatial choices—such as kitchen island placement, glazing configurations, or ceiling step-downs—before any physical construction begins.'
+            'This allows you to walk through spatial choices, such as kitchen island placement, glazing configurations, or ceiling step-downs, before any physical construction begins.'
           ]
         },
         {
